@@ -1,0 +1,281 @@
+:root{
+    --sub-heading: hsl(276, 100%, 81%);
+    --chat-on-the-left: hsl(276, 55%, 52%);
+    --chat-on-the-right: hsl(271, 15%, 43%);
+    --placeholder-text: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+    --gradiant1: hsl(293, 100%, 63%);
+    --gradiant2: hsl(264, 100%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-button-background: hsl(271, 36%, 24%);
+    --radio-button-outline: hsl(289, 100%, 72%);
+    --left-backg: hsl(272, 43%, 93%);
+    --p-size: 16px;
+    --fw-500: 500;
+    --fw-400: 400;
+    --fw-700: 700;
+    --p-height: 1.5;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+/* start componants  */
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* small  */
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+/* medium  */
+@media (min-width:992px) {
+    .container{
+        width: 920px;
+    }
+}
+/* large  */
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* extra large  */
+@media (min-width:1400px) {
+    .container{
+        width: 1320px;
+    }
+}
+/* end componants  */
+.page{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+    min-height: 100vh;
+    background-color: var(--app-background);
+    overflow: hidden;
+}
+.page .backg{
+    position: absolute;
+    height: 90%;
+}
+.page .backg1{
+    width: 413px;
+    top: 0;
+    left: -74px;
+    background-image: linear-gradient(45deg, var(--gradiant2), var(--gradiant1)) ;
+    border-radius: 0 0 200px 200px;
+}
+.page .backg2{
+    width: 500px;
+    bottom: 0;
+    right: -150px;
+    background-color: hsl(272, 43%, 95%);
+    border-radius: 250px 250px 0 0;
+}
+@media (max-width:767px) {
+    .page .backg{
+        height: 55%;
+    }
+    .page .backg1{
+        left: -220px;
+    }
+    .page .backg2{
+        width: 400px;
+        right: -220px;
+    }
+}
+.page .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    z-index: 1;
+}
+@media (max-width:767px) {
+    .page .container{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+.page .container .phone{
+    width: 300px;
+    min-width: 300px;
+    border: 10px solid var(--White);
+    border-radius: 25px;
+    background-color: var(--app-background);
+    z-index: 1;
+}
+.page .container .phone .account{
+    display: flex;
+    align-items: center;
+    padding: 50px 20px 20px;
+    background-image: linear-gradient(90deg, var(--gradiant2), var(--gradiant1));
+    border-radius: 15px 15px 6px 6px;
+    position: relative;
+}
+.page .container .phone .account .notch{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 20px;
+    background-color: var(--White);
+    border-radius: 0 0 20px 20px;
+}
+.page .container .phone .account i:first-of-type{
+    color: var(--White);
+    margin-right: 10px;
+}
+.page .container .phone .account img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-right: 10px;
+}
+.page .container .phone .account .info{
+    flex: 1;
+}
+.page .container .phone .account .info h2{
+    font-size: 16px;
+    color: var(--White);
+    margin-bottom: 5px;
+}
+.page .container .phone .account .info p{
+    font-size: 12px;
+    color: var(--sub-heading);
+}
+.page .container .phone .account i:last-of-type{
+    color: var(--White);
+}
+/* end account  */
+.page .container .phone .chat{
+    padding: 10px;
+}
+.page .container .phone .chat .left{
+    margin-bottom: 20px;
+}
+.page .container .phone .chat .left .left-chat{
+    max-width: 61%;
+    width: fit-content;
+    font-size: 10px;
+    color: var(--chat-on-the-left);
+    background-color: var(--left-backg);
+    border-radius: 15px 15px 15px 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.page .container .phone .chat .right{
+    margin-bottom: 20px;
+    margin-left: auto;
+}
+.page .container .phone .chat .right ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+.page .container .phone .chat .right ul li img{
+    width: 45px;
+    border-radius: 10px;
+}
+.page .container .phone .chat .right p.right-chat{
+    width: fit-content;
+    max-width: 61%;
+    font-size: 10px;
+    color: var(--chat-on-the-right);
+    background-color: var(--White);
+    border-radius: 15px 15px 6px 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+.page .container .phone .chat .left .link{
+    max-width: 70%;
+    font-size: 10px;
+    color: var(--White);
+    background-image: linear-gradient(90deg, var(--gradiant1), var(--gradiant2));
+    border-radius: 15px 15px 15px 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.page .phone .chat .left .link span:first-child{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    outline: 1px solid var(--radio-button-outline);
+    margin-right: 10px;
+}
+.page .phone .chat .left .link p{
+    flex: 1;
+}
+.page .phone .chat .left .link span:last-child{
+    font-weight: var(--fw-700);
+    font-size: 12px;
+}
+.page .container .phone .chat .send{
+    width: 100%;
+    height: 40px;
+    background-color: var(--White);
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page .container .phone .chat .send input{
+    border: none;
+    font-size: 10px;
+    flex: 1;
+}
+.page .container .phone .chat .send input:focus{
+    outline: none;
+}
+.page .container .phone .chat .send input::placeholder{
+    color: var(--placeholder-text);
+}
+.page .container .phone .chat .send i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--submit-button-background);
+    color: var(--White);
+    font-size: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* end phone  */
+@media (max-width:767px) {
+    .page .about{
+        text-align: center;
+    }
+}
+.page .about h1{
+    margin: 0 0 20px;
+    color: var(--main-heading);
+}
+.page .about p{
+    max-width: 450px;
+    font-size: var(--p-size);
+    color: var(--paragraph);
+    line-height: var(--p-height);
+}
